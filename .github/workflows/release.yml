@@ -1,0 +1,26 @@
+name: Release
+
+on:
+  push:
+    tags: v*
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - uses: ./.github/actions/python-setup
+      - name: Build package distribution
+        run: poetry build --no-interaction
+      - name: Create release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: dist/*
+      - name: Configure PyPI access
+        run: poetry config pypi-token.pypi ${{ secrets.PYPI_API_TOKEN }}
+      - name: Publish package to PyPI
+        run: poetry publish --no-interaction

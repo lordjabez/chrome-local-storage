@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "chrome-local-storage"
 description = "Interact with Google Chrome local storage"
-version = "0.5.1"
+version = "0.0.0"
 license = "MIT-0"
 authors = ["Judson Neer <judson.neer@gmail.com>"]
 repository = "https://github.com/lordjabez/chrome-local-storage"

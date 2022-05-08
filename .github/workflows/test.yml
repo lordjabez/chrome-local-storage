@@ -1,4 +1,4 @@
-name: Run Tests
+name: Tests
 
 on: pull_request
 
@@ -12,15 +12,5 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
       - uses: ./.github/actions/python-setup
-      - name: Run linter on package code
-        run: poetry run flake8 --max-line-length=120 --statistics chrome_local_storage
-      - name: Run linter on test code
-        run: poetry run flake8 --max-line-length=120 --statistics tests
-      - name: Run security checks on package code
-        run: poetry run bandit -r chrome_local_storage
-      - name: Run security checks on test code
-        run: poetry run bandit -s B101 -r tests
-      - name: Run security checks on dependencies
-        run: poetry run safety check --full-report
       - name: Run tests
         run: poetry run pytest -vv --cov=chrome_local_storage --cov-report=term --cov-report=xml
