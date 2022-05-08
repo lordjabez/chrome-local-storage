@@ -1,0 +1,18 @@
+name: Run Linter
+
+on: pull_request
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - uses: ./.github/actions/python-setup
+      - name: Run linter on package code
+        run: poetry run flake8 --max-line-length=120 --statistics chrome_local_storage
+      - name: Run linter on test code
+        run: poetry run flake8 --max-line-length=120 --statistics tests
