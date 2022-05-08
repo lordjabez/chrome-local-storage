@@ -1,5 +1,10 @@
 # Chrome Local Storage
 
+[![Tests](https://github.com/lordjabez/chrome-local-storage/actions/workflows/test.yml/badge.svg)](https://github.com/lordjabez/chrome-local-storage/actions/workflows/test.yml)
+[![Linter](https://github.com/lordjabez/chrome-local-storage/actions/workflows/lint.yml/badge.svg)](https://github.com/lordjabez/chrome-local-storage/actions/workflows/lint.yml)
+[![Security](https://github.com/lordjabez/chrome-local-storage/actions/workflows/scan.yml/badge.svg)](https://github.com/lordjabez/chrome-local-storage/actions/workflows/scan.yml)
+[![PyPI](https://github.com/lordjabez/chrome-local-storage/actions/workflows/publish.yml/badge.svg)](https://github.com/lordjabez/chrome-local-storage/actions/workflows/publish.yml)
+
 This Python package makes it easy to interact with Google Chrome local storage,
 either a locally-running browser or any remote browser that supports remote
 debugging (e.g. Chrome on Android via `adb` port forwarding).
