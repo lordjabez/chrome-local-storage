@@ -76,10 +76,3 @@ phone_storage = chrome_local_storage.ChromeLocalStorage(port=9223)
 wordle_stats = laptop_storage.get('games/wordle', 'nyt-wordle-statistics')
 phone_storage.set('games/wordle', 'nyt-wordle-statistics', wordle_stats)
 ```
-
-
-# To-Do
-
-*  Automate build and release with Github Actions
-*  Integrate Android debugger functions using [python-adb](https://github.com/google/python-adb)
-*  Figure out a similar technique that can be used to sync to iOS devices
