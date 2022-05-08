@@ -595,7 +595,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.7 <3.10"
-content-hash = "f862e33c493969e720e0df1eb57941ebccd123c4739bf6357ae87c30df8a186d"
+content-hash = "f8ac6c7a3ad02a9b40ff87d0209a0e2cbf50311c3081f0d521b7bdb68ad87e4c"
 
 [metadata.files]
 async-generator = [
