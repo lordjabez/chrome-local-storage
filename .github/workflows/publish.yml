@@ -11,6 +11,9 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - uses: ./.github/actions/python-setup
       - name: Configure PyPI access
         run: poetry config pypi-token.pypi ${{ secrets.PYPI_API_TOKEN }}
       - name: Build and publish package

@@ -11,7 +11,7 @@ runs:
       uses: actions/cache@v2
       with:
         path: ~/.local
-        key: local-${{ runner.os }}-${{ hashFiles('.github/workflows/test.yml') }}
+        key: local-${{ runner.os }}-${{ hashFiles('.github/actions/python-setup/action.yml') }}
     - name: Install Poetry
       uses: snok/install-poetry@v1
       with:
