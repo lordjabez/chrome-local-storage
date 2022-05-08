@@ -1,0 +1,17 @@
+name: Publish Python Package
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Configure PyPI access
+        run: poetry config pypi-token.pypi ${{ secrets.PYPI_API_TOKEN }}
+      - name: Build and publish package
+        run: poetry publish --build --no-interaction
